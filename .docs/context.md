@@ -1,65 +1,55 @@
-# Planeación Detallada: TelarWeb Agencia
+# Contexto del Proyecto: Telar Web
 
-TelarWeb es una agencia de software boutique (artesanal) especializada en soluciones web de alta conversión y performance. El objetivo de este sitio web es servir como la cara pública de la agencia, demostrar autoridad técnica y, lo más importante, capturar y calificar leads a través de un **Cotizador Guiado** interactivo.
+## Nombre del producto / servicio
+Telar Web
 
-## 1. Arquitectura de Pantallas y Secciones
+## Tipo de solución
+Plataforma / Desarrollo Web
 
-### 1.1 Landing Page Comercial (Inicio)
-- **Hero Section**: Alta conversión con enfoque en "Arquitectura & Desarrollo Artesanal". Debe incluir los llamados a la acción (CTAs) principales hacia el cotizador y los procesos.
-- **Servicios Especializados**: 
-  - Landing Pages de alta conversión.
-  - E-commerce a la medida (Wompi, PSE).
-  - Integración de IA y flujos automáticos.
-- **Proceso & Acuerdo Tecnológico**: Explicación de las 4 fases (Diagnóstico, Prototipado, Sprints, Despliegue) y una tabla de comparación "Telar Web vs Cajas Negras".
-- **Contacto Directo**: Módulo rápido para contacto por correo y WhatsApp.
+## Descripción general
+Telar Web es un servicio de desarrollo de sitios web profesionales, rápidos y funcionales, orientado a pymes que aún no tienen presencia digital o cuya presencia actual es deficiente. Incluye diseño, desarrollo y publicación de un sitio web listo para mostrar la marca, los productos o servicios del cliente, y facilitar el contacto con sus clientes potenciales.
 
-### 1.2 Casos de Éxito (Portafolio)
-- Tarjetas visuales de resultados reales (ej. "Panadería Doña Elena", "Logística Andina", "Clínica Sonrisas").
-- **Métricas Destacadas**: En cada tarjeta se mostrará el aumento de conversión (ej. +210%), métricas de PageSpeed (0.9s), o ahorro de tiempo.
+## Problema que resuelve
+Muchas pequeñas y medianas empresas son “invisibles en internet”: no tienen sitio web, o tienen uno desactualizado, lento o poco profesional, lo que les hace perder oportunidades de venta frente a competidores que sí tienen presencia digital sólida.
 
-### 1.3 Cotizador Guiado Interactivo (Core Feature)
-Esta es la funcionalidad principal interactiva. Es un *wizard* de 4 pasos donde el usuario configura su proyecto y el precio se actualiza en tiempo real, terminando en un formulario de captura de lead.
+## Público objetivo
+Pymes, emprendedores y profesionales independientes que necesitan presencia digital propia (no dependiente solo de redes sociales) para generar confianza y captar clientes.
 
-- **Paso 1: Tipo de Proyecto** (Landing, Corporativo, E-commerce, SaaS a medida, Integración IA).
-- **Paso 2: Volumen de Vistas** (1 a 3, 4 a 7, 8+, Ecosistema Dinámico).
-- **Paso 3: Funcionalidades Especiales** (Pasarelas de Pago, Agente IA, CMS Headless, Multiidioma, Sincronización CRM). Múltiple selección.
-- **Paso 4: Arquitectura Tecnológica** (Stack recomendado vs Requerimientos propios).
-- **Resumen Flotante (Sticky)**: Muestra en tiempo real la sumatoria de costos en COP y USD, además de estimación de tiempo.
-- **Lead Capture Form**: Formulario final (Nombre, Email Corporativo, WhatsApp/Teléfono) que, al enviarse, guarda toda la cotización en Supabase.
+## Propuesta de valor
+Un sitio web propio, profesional y funcional en poco tiempo, que le da a la pyme presencia real en internet, mejora su credibilidad frente a clientes potenciales y sirve como canal directo de contacto y ventas, sin la complejidad ni el costo de una agencia tradicional.
 
----
+## Funcionalidades principales
+- Sitio web institucional/landing con secciones de servicios, productos y contacto.
+- Diseño responsive (adaptado a celular, tablet y computador).
+- Formulario o botón de contacto directo (WhatsApp, correo o formulario web).
+- Panel básico o guía para que el cliente actualice contenido sencillo.
 
-## 2. Modelado de Base de Datos (Supabase)
+## Beneficios principales
+- Mayor visibilidad y credibilidad ante clientes potenciales.
+- Canal de contacto directo que facilita nuevas ventas.
+- Ahorro de tiempo frente a soluciones hechas a la medida desde cero.
+- Mejora en la experiencia del usuario que visita la marca en línea.
 
-Para soportar el cotizador interactivo, implementaremos la siguiente tabla principal para guardar las solicitudes de diagnóstico/cotización:
+## Cómo funciona
+El cliente comparte la información de su negocio (servicios, productos, marca, contacto). El equipo de Telar diseña y desarrolla el sitio con la estructura mínima necesaria para mostrar el negocio de forma profesional, lo publica en internet y lo entrega listo para usar, con un canal de contacto habilitado para que los visitantes puedan comunicarse directamente con el cliente.
 
-**Tabla: `quote_requests` (Cotizaciones / Leads)**
-- `id` (uuid, PK)
-- `client_name` (text, not null)
-- `client_email` (text, not null)
-- `client_phone` (text, not null)
-- `project_type` (text, not null) - Ej: 'corporate', 'ecommerce', etc.
-- `views_scope` (text, not null)
-- `special_modules` (text[] - array de strings)
-- `tech_architecture` (text)
-- `estimated_price_cop` (numeric)
-- `estimated_price_usd` (numeric)
-- `estimated_timeline` (text)
-- `status` (text) - default: 'pending' (pending, contacted, closed)
-- `created_at` (timestamptz)
+## Integraciones
+WhatsApp Business / correo electrónico para contacto directo; redes sociales del cliente; posible integración futura con Telar Tag (perfil digital) o Telar Monitor (dashboards).
 
-> *Nota de Seguridad*: Esta tabla tendrá Row Level Security (RLS) habilitado. Se permitirá `INSERT` para usuarios anónimos (público general), pero el `SELECT` o `UPDATE` estará restringido solo a administradores.
+## Modalidad de acceso / implementación
+Web (sitio publicado en internet, accesible desde cualquier navegador).
 
----
+## Seguridad y privacidad
+Conexión segura mediante HTTPS/SSL, autenticación y gestión de bases de datos según la tecnología elegida con el cliente, y manejo responsable de los datos de contacto recibidos a través del sitio, sin almacenamiento innecesario de información sensible del cliente final.
 
-## 3. Estado de la Aplicación y Manejo de UI
+## Escalabilidad
+El sitio puede crecer agregando nuevas secciones, catálogo de productos, blog o integraciones con otras soluciones de Telar a medida que el negocio del cliente lo requiera. La arquitectura tecnológica elegida permitirá escalar tanto el frontend como la base de datos sin cambios estructurales mayores.
 
-- **Interactividad**: Usaremos React Context o Zustand (o simples estados locales si el componente está unificado) para mantener el estado del cotizador y actualizar el componente "Sticky" del precio.
-- **Estilos**: Tailwind CSS con un sistema de diseño oscuro y profesional (`bg-[#121110]`), usando colores clave como `amber-500` (Telar Gold), `emerald-400` y `copper`.
-- **Animaciones**: Utilizaremos Framer Motion para hacer las transiciones entre las selecciones del cotizador y para la aparición suave (FadeIn) de las secciones de la Landing Page.
+## Soporte y mantenimiento
+Soporte inicial de puesta en marcha y ajustes; mantenimiento y actualizaciones disponibles como servicio adicional.
 
-## 4. Próximos Pasos Técnicos para Agentes/Desarrolladores
-1. Configurar la tabla `quote_requests` en Supabase y generar los repositorios y casos de uso pertinentes en `src/domain` y `src/application`.
-2. Crear los tokens de diseño (colores y tipografías personalizadas) en `tailwind.config.ts`.
-3. Desarrollar el componente aislado `QuoteWizard.tsx` con su lógica de cálculo.
-4. Ensamblar la Landing Page integrando los componentes estáticos visuales.
+## Modelo comercial
+Se rige bajo los lineamientos y parámetros ya definidos por el equipo general de Telar. Los costos, planes y modalidades de pago están estandarizados para integrarse de forma coherente con el resto del ecosistema de servicios de la marca.
+
+## Diferenciadores
+Entrega rápida enfocada en valor real desde el primer día, acompañamiento cercano y posibilidad de integrarse con el resto del ecosistema Telar (Tag, IA, Monitor, etc.) a futuro.
