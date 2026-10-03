@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 const navLinks = [
   { href: '/#servicios', label: 'Servicios' },
   { href: '/#proceso', label: 'Proceso & Acuerdo' },
-  { href: '/#casos-de-exito', label: 'Casos de Éxito' },
+  { href: '/#portafolio', label: 'Casos de Éxito' },
   { href: '/cotizador', label: 'Cotizador' },
 ];
 
@@ -35,10 +35,7 @@ export default function Header() {
           className="flex items-center gap-3 group shrink-0"
           aria-label="Telar Web — Inicio"
         >
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-[0_0_12px_rgba(245,158,11,0.4)] group-hover:shadow-[0_0_20px_rgba(245,158,11,0.6)] transition-shadow">
-            <span className="text-[#1a1105] font-bold text-sm font-mono">TW</span>
-          </div>
-          <span className="font-bold text-lg text-[#f5f2eb] tracking-tight">
+          <span className="font-bold text-xl text-[#f5f2eb] tracking-tight">
             Telar <span className="text-amber-400">Web</span>
           </span>
         </Link>

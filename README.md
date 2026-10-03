@@ -6,7 +6,7 @@ Repositorio principal del sitio web de **Telar Web**, una agencia boutique de de
 
 ---
 
-## 📚 Documentación del Proyecto
+## Documentación del Proyecto
 
 Toda la documentación técnica y de producto está en la carpeta [`.docs/`](./.docs/):
 
@@ -20,7 +20,7 @@ Toda la documentación técnica y de producto está en la carpeta [`.docs/`](./.
 
 ---
 
-## 🚀 Iniciar el proyecto en local
+## Iniciar el proyecto en local
 
 ```bash
 npm install
@@ -31,7 +31,7 @@ Abre [http://localhost:3000](http://localhost:3000) para ver el resultado.
 
 ---
 
-## 🌿 Flujo de trabajo (GitFlow)
+## Flujo de trabajo (GitFlow)
 - **`main`**: Código en producción. Solo recibe merges de `release/*` o `hotfix/*`.
 - **`develop`**: Rama de integración. Aquí convergen las features terminadas.
 - **`feature/*`**: Una rama por funcionalidad (ej. `feature/quote-wizard`).
@@ -39,7 +39,7 @@ Abre [http://localhost:3000](http://localhost:3000) para ver el resultado.
 
 ---
 
-## 🛠️ Stack
+## Stack
 - **Next.js** (App Router) + TypeScript
 - **Tailwind CSS** + Framer Motion
 - **Supabase** (PostgreSQL + Auth + Storage)
