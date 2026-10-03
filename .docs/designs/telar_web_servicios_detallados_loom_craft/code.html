@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#121110",
+          "on-background": "#ece5df",
+          "surface-bright": "#3d3834",
+          "inverse-on-surface": "#322f2b",
+          "on-tertiary-container": "#4d1900",
+          "surface-container-highest": "#34302c",
+          "outline-variant": "#4a433d",
+          "tertiary-fixed-dim": "#ffb596",
+          "error-container": "#93000a",
+          "on-tertiary-fixed": "#360f00",
+          "secondary-fixed": "#89f5e7",
+          "tertiary": "#f97316",
+          "on-primary": "#2e1500",
+          "tertiary-fixed": "#ffdbcd",
+          "on-tertiary-fixed-variant": "#7d2d00",
+          "primary": "#f59e0b",
+          "outline": "#8a7e75",
+          "surface-container-high": "#272421",
+          "on-secondary": "#02372d",
+          "on-primary-fixed": "#2f1500",
+          "on-secondary-fixed": "#00201a",
+          "primary-container": "#d97706",
+          "secondary": "#10b981",
+          "primary-fixed": "#fed7aa",
+          "on-primary-container": "#fffbeb",
+          "surface-dim": "#121110",
+          "surface-container-lowest": "#0c0b0a",
+          "on-primary-fixed-variant": "#78350f",
+          "on-tertiary": "#581e00",
+          "on-secondary-container": "#064e3b",
+          "surface-tint": "#f59e0b",
+          "secondary-container": "#047857",
+          "inverse-surface": "#ece5df",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#b45309",
+          "on-surface": "#ece5df",
+          "surface-container": "#1e1c19",
+          "on-surface-variant": "#cec4bc",
+          "surface-variant": "#2b2723",
+          "secondary-fixed-dim": "#6ee7b7",
+          "background": "#121110",
+          "tertiary-container": "#ea580c",
+          "primary-fixed-dim": "#fbbf24",
+          "on-secondary-fixed-variant": "#065f46",
+          "surface-container-low": "#181614",
+          "error": "#ffb4ab",
+          "on-error": "#690005",
+          "loom-slate-base": "#121110",
+          "loom-slate-surface": "#1a1816",
+          "loom-slate-elevated": "#24211e",
+          "text-primary": "#f7f4f0",
+          "text-muted": "#aba096",
+          "warp-cyan": "#f59e0b",
+          "weft-amber": "#d97706",
+          "node-teal": "#10b981",
+          "thread-ochre": "#b45309"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "1.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "margin-md": "3rem",
+          "space-xl": "2.5rem",
+          "space-xs": "0.25rem",
+          "gutter-sm": "1rem",
+          "margin-lg": "5rem",
+          "space-2xl": "4rem",
+          "gutter-lg": "2rem"
+        },
+        "fontFamily": {
+          "code-badge": ["JetBrains Mono", "monospace"],
+          "body-lg": ["Inter", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["JetBrains Mono", "monospace"],
+          "headline-xl-mobile": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+          "label-md": ["Inter", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-hero": ["Plus Jakarta Sans", "sans-serif"],
+          "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+          "body-sm": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"]
+        },
+        "fontSize": {
+          "code-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+          "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+          "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+          "headline-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+          "headline-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+          "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary/25 selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-[#121110]/90 backdrop-blur-xl border-b border-[#2e2924] shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-md group" data-path="inicio" href="#"><img alt="Telar Web" class="w-8 h-8 rounded-full object-cover shadow-[0_0_14px_rgba(245,158,11,0.35)] transition-transform group-hover:scale-105 ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUDBdu7Gqlds5YkF85xVaLLSDuvijv-Au_ZgwS-OMRD_uf2QDoH20lizuIiODo_18A8dP_e0CoeJqviqrojeV9r_AWpw-kpoAbgZgdLR0IjVcEpVIDCt764reNSA4xAa4E-kSPXKY5xHeiISycj39-uQTK1-a-MuLkSCXuVBBhWhxz6s66UYrr0UKpfrvb8a78CbEZU942BFk8t6NvZMOOTXRtseEJAMPgj19F30mGljYW-EPwQso9DCiNjiK3ww8WhQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold group-hover:text-primary transition-colors">Telar Web</span></div></a></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg border border-primary/30 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_0_16px_rgba(217,119,6,0.18)]"><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="inicio" href="#">Inicio</a><a aria-current="page" class="px-space-md py-space-sm transition-all bg-surface-container-high text-primary font-bold rounded-lg border border-primary/30 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_0_16px_rgba(217,119,6,0.18)]" data-path="servicios" href="#">Servicios</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="proceso-y-acuerdo" href="#">Proceso &amp; Acuerdo</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="casos-de-exito" href="#">Casos de Éxito</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="cotizador" href="#">Cotizador</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-gradient-to-r from-primary to-primary-container text-surface-container-lowest font-label-md text-label-md font-bold shadow-[0_0_24px_rgba(245,158,11,0.35)] hover:shadow-[0_0_32px_rgba(245,158,11,0.55)] hover:brightness-110 transition-all duration-200" data-path="cotizador" href="#">Cotizar proyecto</a></div></div></header><main class="w-full pt-20 bg-loom-slate-base min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- SECTION HERO -->
+<section class="relative w-full overflow-hidden bg-loom-slate-base py-space-2xl">
+<!-- Ambient glowing threads of the Digital Loom: warm amber, bronze and patina -->
+<div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[720px] h-[400px] bg-primary/10 blur-[150px] rounded-full"></div>
+<div class="pointer-events-none absolute top-1/3 -right-20 w-[420px] h-[420px] bg-tertiary-container/15 blur-[160px] rounded-full"></div>
+<div class="pointer-events-none absolute bottom-0 -left-20 w-[400px] h-[400px] bg-secondary/10 blur-[140px] rounded-full"></div>
+<div class="relative max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Text Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-surface-container-high/90 border border-primary/30 shadow-[0_0_14px_rgba(245,158,11,0.18)]">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_10px_#f59e0b] animate-pulse"></span>
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary">Portafolio Técnico Integral</span>
+<span class="font-code-badge text-code-badge text-text-muted/60">/ LatAm Hub</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-text-primary tracking-tight">
+            Soluciones Web y Tecnológicas Diseñadas Para <span class="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary via-tertiary to-secondary">Crecer Sin Límites</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl">
+            Acompañamos a PYMEs consolidadas, directores de innovación y marcas en expansión a erradicar la invisibilidad digital. Construimos activos propietarios de alto calibre técnico: sin plantillas prefabricadas, con tiempos de respuesta quirúrgicos y arquitectura flexible acordada en común acuerdo.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-lg bg-gradient-to-r from-primary via-primary-container to-tertiary-container text-surface-container-lowest font-label-md text-label-md font-bold shadow-[0_0_28px_rgba(245,158,11,0.4)] hover:shadow-[0_0_36px_rgba(245,158,11,0.6)] hover:brightness-110 transition-all" data-path="cotizador" href="#">
+<span class="">Diseñar Cotización a la Medida</span>
+<span class="material-symbols-outlined text-base font-bold">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-lg bg-loom-slate-surface border border-outline-variant/60 text-text-primary font-label-md text-label-md font-semibold hover:bg-loom-slate-elevated hover:border-primary/50 transition-all shadow-sm" href="https://wa.me/573100000000" target="_blank">
+<span class="material-symbols-outlined text-primary text-lg">chat</span>
+<span class="">Hablar con un Ingeniero</span>
+</a>
+</div>
+<!-- Quick trust indicators -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-xl text-text-muted font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">speed</span>
+<span class="">Puntaje 95+ PageSpeed Garantizado</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-lg">verified_user</span>
+<span class="">100% Código Fuente Propietario</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-lg">handshake</span>
+<span class="">Stack Técnico en Mutuo Acuerdo</span>
+</div>
+</div>
+</div>
+<!-- Visual Column: Warm Bronze & Deep Obsidian Telemetry Box -->
+<div class="lg:col-span-5 relative">
+<div class="relative w-full rounded-2xl bg-loom-slate-surface/95 border border-[#3d332a] backdrop-blur-xl p-space-lg shadow-[0_0_40px_rgba(217,119,6,0.14)] overflow-hidden">
+<!-- Background luminous canvas lines: artisanal amber & copper threads -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="loomFlowGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#ea580c" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#10b981" stop-opacity="0.9"></stop>
+</lineargradient>
+</defs>
+<path d="M 20,40 Q 140,110 320,60 T 480,180" fill="none" stroke="url(#loomFlowGrad)" stroke-dasharray="4 4" stroke-width="2"></path>
+<path d="M 30,220 Q 160,140 280,260 T 460,90" fill="none" stroke="url(#loomFlowGrad)" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+<!-- Card Header with Brand Seal -->
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-loom-slate-elevated/80 border border-primary/25 rounded-xl px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<img alt="Telar Web Sello" class="w-7 h-7 rounded-full object-cover ring-1 ring-primary/50 shadow-[0_0_12px_rgba(245,158,11,0.45)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAziEtfF6rDPn20WR3iFU8SEdr1kg9kxazds7-nWodSneslxg-TMRrDujqL_4Ezr4j8IrhUxfbrAR8p7ZeIsvVkn_vsNxQ3xIr7dcSVDjRG9BzSQYqiQ-imGPJfUGjfLoiK6WLcX-YsjGjJxHHVAFvwFXB3bhDiuyTrrUqGghx135AH_KsT9vEVxIEx_4211UNzurr0rNhOuD4w1Pn3_RzDxeHx8cImOB_RC_yzK5cd5qDNC6cuQ85y448_I95JzJq8Pw"/>
+<div>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold block">Telar Architecture Lab</span>
+<span class="font-code-badge text-code-badge uppercase text-primary tracking-wider">Performance Monitor • Active</span>
+</div>
+</div>
+<span class="px-space-sm py-space-xs rounded-full bg-primary/15 border border-primary/30 text-primary font-code-badge text-code-badge uppercase font-bold tracking-wider">Latency &lt; 28ms</span>
+</div>
+<!-- Glowing Telemetry Mockup Nodes -->
+<div class="space-y-space-md relative z-10">
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/90 border border-[#3a332d] shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Frontend Core Web Vitals</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">99 / 100</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden p-[1px]">
+<div class="bg-gradient-to-r from-primary via-tertiary to-secondary h-full rounded-full w-[99%] shadow-[0_0_10px_rgba(245,158,11,0.6)]"></div>
+</div>
+<div class="flex justify-between font-code-badge text-code-badge text-text-muted mt-space-xs">
+<span class="text-primary">LCP: 0.6s</span>
+<span class="text-secondary">FID: 4ms</span>
+<span class="text-tertiary">CLS: 0.001</span>
+</div>
+</div>
+<!-- Interactive Node Flow -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/85 border border-primary/25 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f59e0b]"></span>
+</div>
+<div class="mt-space-md">
+<span class="font-code-badge text-code-badge uppercase text-text-muted block">Zero Margins</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">0% Comisiones</span>
+<span class="font-label-sm text-label-sm text-text-muted block mt-space-xs">Pagos Directos a tu Cuenta</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/85 border border-secondary/25 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-xl">smart_toy</span>
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#10b981]"></span>
+</div>
+<div class="mt-space-md">
+<span class="font-code-badge text-code-badge uppercase text-text-muted block">Orquestación IA</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">24/7 Autopilot</span>
+<span class="font-label-sm text-label-sm text-text-muted block mt-space-xs">WhatsApp + CRM Sync</span>
+</div>
+</div>
+</div>
+<!-- Live Stack Policy Notice -->
+<div class="p-space-sm rounded-lg bg-loom-slate-elevated/60 border border-outline-variant/50 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base">info</span>
+<p class="font-body-sm text-body-sm text-text-muted">
+<strong class="text-text-primary">Arquitectura a la Carta:</strong> Seleccionamos bases de datos, nubes y lenguajes en común acuerdo con tu equipo según el volumen proyectado.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PILLAR 1: SITIOS WEB CORPORATIVOS Y LANDING PAGES -->
+<section class="relative w-full py-space-2xl bg-surface-container-lowest" id="sitios-web">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center mb-space-xl">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-loom-slate-surface border border-primary/30 text-primary font-code-badge text-code-badge uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f59e0b]"></span>
+<span class="">Pilar 01 • Conversión y Autoridad</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            Sitios Web Corporativos &amp; Landing Pages de Alta Conversión
+          </h2>
+<p class="font-body-lg text-body-lg text-text-muted">
+            Construimos activos digitales pensados para seducir al comprador exigente y posicionar de forma implacable la credibilidad de tu empresa. Nada de constructores lentos ni plantillas sobrecargadas: código puro, ultraligero y estructurado para ventas reales.
+          </p>
+</div>
+<div class="lg:col-span-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface/90 border border-[#38312b] shadow-md hover:border-primary/50 transition-all">
+<div class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary mb-space-md shadow-[0_0_12px_rgba(245,158,11,0.2)]">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">UI/UX a Medida</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Diseño de autor creado desde un lienzo en blanco para reflejar el estatus exacto de tu negocio sin clonar competidores.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface/90 border border-[#38312b] shadow-md hover:border-tertiary/50 transition-all">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/15 border border-tertiary-container/30 flex items-center justify-center text-tertiary mb-space-md shadow-[0_0_12px_rgba(234,88,12,0.2)]">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">Puntaje 95+ PageSpeed</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Carga prácticamente instantánea en redes 4G móviles. Cero rebote de visitantes por tiempos muertos de pantalla.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface/90 border border-[#38312b] shadow-md hover:border-secondary/50 transition-all">
+<div class="w-10 h-10 rounded-xl bg-secondary/15 border border-secondary/30 flex items-center justify-center text-secondary mb-space-md shadow-[0_0_12px_rgba(16,185,129,0.2)]">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">Copywriting Persuasivo</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Redacción estratégica orientada al dolor de tu cliente, destacando valor único y orquestando llamadas claras a la acción.</p>
+</div>
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface/90 border border-[#38312b] shadow-md hover:border-primary/50 transition-all">
+<div class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary mb-space-md shadow-[0_0_12px_rgba(245,158,11,0.2)]">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">SEO &amp; Eventos de Analítica</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Estructuración Schema.org semántica, metadatos listos y telemetría de eventos vinculada a tus herramientas de analítica.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPARATIVE MATRIX: WARM STONE/BRONZE BORDERS -->
+<div class="mt-space-xl p-space-lg md:p-space-xl rounded-2xl bg-loom-slate-surface border border-[#3d342d] shadow-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-code-badge text-code-badge uppercase text-primary font-bold tracking-wider">Matriz de Diferenciación Técnica</span>
+<h3 class="font-headline-lg text-headline-lg text-text-primary mt-space-xs">Telar Web vs. Agencias Tradicionales</h3>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-loom-slate-elevated border border-primary/30 text-text-muted font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span>
+<span class="">Evaluación de estándares de entrega</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-separate border-spacing-y-1">
+<thead>
+<tr class="bg-loom-slate-elevated/80 text-text-primary font-label-md text-label-md">
+<th class="py-space-md px-space-md rounded-l-lg border-y border-l border-[#3a322c]">Criterio Técnico</th>
+<th class="py-space-md px-space-md text-text-muted border-y border-[#3a322c]">Agencias Convencionales</th>
+<th class="py-space-md px-space-md rounded-r-lg bg-gradient-to-r from-primary/15 via-loom-slate-elevated to-primary/20 border-y border-r border-primary/40 text-primary font-bold shadow-[0_0_20px_rgba(245,158,11,0.2)]">Enfoque Telar Web</th>
+</tr>
+</thead>
+<tbody class="text-text-muted">
+<tr class="hover:bg-loom-slate-elevated/50 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-text-primary">Base de Construcción</td>
+<td class="py-space-md px-space-md">Plantillas genéricas modificadas, constructores pesados</td>
+<td class="py-space-md px-space-md bg-primary/10 border-l-2 border-primary font-bold text-text-primary">Arquitectura a la medida, código optimizado desde cero</td>
+</tr>
+<tr class="hover:bg-loom-slate-elevated/50 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-text-primary">Rendimiento Google PageSpeed</td>
+<td class="py-space-md px-space-md">40 - 70/100 (tiempos de carga superiores a 4s)</td>
+<td class="py-space-md px-space-md bg-primary/10 border-l-2 border-primary font-bold text-primary">95 - 100/100 sostenido en móviles y desktop</td>
+</tr>
+<tr class="hover:bg-loom-slate-elevated/50 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-text-primary">Propiedad del Código</td>
+<td class="py-space-md px-space-md">Suscripciones retenidas o ataduras a servidores propios</td>
+<td class="py-space-md px-space-md bg-primary/10 border-l-2 border-primary font-bold text-primary">100% de propiedad del cliente, repositorio entregado</td>
+</tr>
+<tr class="hover:bg-loom-slate-elevated/50 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-text-primary">Transparencia y Entregas</td>
+<td class="py-space-md px-space-md">Silos cerrados, semanas sin avances visibles</td>
+<td class="py-space-md px-space-md bg-primary/10 border-l-2 border-primary font-bold text-text-primary">Despliegues semanales en entornos de staging accesibles</td>
+</tr>
+<tr class="hover:bg-loom-slate-elevated/50 transition-colors">
+<td class="py-space-md px-space-md font-semibold text-text-primary">Selección de Herramientas</td>
+<td class="py-space-md px-space-md">Imposición de plataformas prediseñadas</td>
+<td class="py-space-md px-space-md bg-primary/10 border-l-2 border-secondary font-bold text-secondary">Pactado en común acuerdo según la meta del cliente</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- PILLAR 2: PLATAFORMAS & E-COMMERCE A LA MEDIDA -->
+<section class="relative w-full py-space-2xl bg-loom-slate-base" id="ecommerce">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Visual Component: E-Commerce Control Center & Colombian Gateways -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="p-space-xl rounded-2xl bg-loom-slate-surface border border-[#3d342d] shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-md mb-space-lg bg-loom-slate-elevated/70 border border-primary/25 rounded-xl px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary">point_of_sale</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Telar Commerce Engine</span>
+</div>
+<span class="px-space-sm py-space-xs rounded-full bg-primary/15 border border-primary/30 text-primary font-code-badge text-code-badge uppercase font-bold tracking-wider">Sin intermediación</span>
+</div>
+<!-- Dashboard Simulation -->
+<div class="space-y-space-md">
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/85 border border-[#3a322c]">
+<span class="font-code-badge text-code-badge text-text-muted uppercase block">Ventas Mes</span>
+<span class="font-headline-md text-headline-md text-text-primary font-bold">$142.8M</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">+34% vs mes ant.</span>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/85 border border-primary/30">
+<span class="font-code-badge text-code-badge text-text-muted uppercase block">Comisión Plataforma</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">$0 COP</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Ahorro total</span>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/85 border border-[#3a322c]">
+<span class="font-code-badge text-code-badge text-text-muted uppercase block">Conversión Checkout</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">4.8%</span>
+<span class="font-label-sm text-label-sm text-text-muted">Checkout fluido</span>
+</div>
+</div>
+<!-- Colombian & Global Gateways Supported Badge Group -->
+<div class="p-space-lg rounded-xl bg-loom-slate-elevated/50 border border-outline-variant/40">
+<span class="font-code-badge text-code-badge uppercase text-text-muted tracking-wider block mb-space-sm">
+                  Pasarelas Integradas Nativamente:
+                </span>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-primary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">Wompi Bancolombia</span>
+</div>
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-secondary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#10b981]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">PSE Nacional</span>
+</div>
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-tertiary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_6px_#f97316]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">Bold Co.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-primary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">PayU LatAm</span>
+</div>
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-secondary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#10b981]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">Stripe Global</span>
+</div>
+<div class="p-space-sm rounded-lg bg-loom-slate-surface border border-tertiary/25 flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_6px_#f97316]"></span>
+<span class="font-label-sm text-label-sm text-text-primary font-semibold">Addi &amp; Cuotas</span>
+</div>
+</div>
+</div>
+<!-- Inventory sync feature preview -->
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/70 border border-[#3a322c] flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary">sync_saved_locally</span>
+<div>
+<span class="font-label-md text-label-md text-text-primary font-bold block">Sincronización en Tiempo Real</span>
+<span class="font-body-sm text-body-sm text-text-muted">Conecta tu ERP, software contable o bodega física sin fricciones.</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Copy Column -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-loom-slate-surface border border-primary/30 text-primary font-code-badge text-code-badge uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f59e0b]"></span>
+<span class="">Pilar 02 • Comercio Autónomo</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            Plataformas &amp; E-commerce a la Medida
+          </h2>
+<p class="font-body-lg text-body-lg text-text-muted">
+            Deja de pagar comisiones mensuales recurrentes del 2% o 3% sobre cada venta a marketplaces o motores de plantilla limitantes. Desarrollamos tiendas virtuales y plataformas B2B independientes, donde cada peso facturado ingresa directo a tus cuentas bancarias.
+          </p>
+<div class="space-y-space-md pt-space-xs">
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-loom-slate-elevated text-primary border border-primary/25 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Panel de Administración a Tu Medida</h4>
+<p class="font-body-sm text-body-sm text-text-muted">Gestor simplificado de inventarios, pedidos, despachos, cupones y roles de usuario, diseñado para que cualquier miembro de tu equipo lo domine en minutos.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-loom-slate-elevated text-tertiary border border-tertiary/25 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-xl">currency_exchange</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Ecosistema de Pagos Colombiano e Internacional</h4>
+<p class="font-body-sm text-body-sm text-text-muted">Integración certificada con Wompi, PSE, Bold, PayU y Stripe. Compatibilidad total con facturación electrónica y pasarelas de financiamiento.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-loom-slate-elevated text-secondary border border-secondary/25 mt-1 shadow-sm">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Escalabilidad Sin Bloqueos</h4>
+<p class="font-body-sm text-body-sm text-text-muted">Diseñado para soportar picos masivos de tráfico en jornadas como Black Friday o CyberLunes sin caídas ni colapsos del servidor.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PILLAR 3: INTEGRACIÓN DE IA & AUTOMATIZACIÓN DE PROCESOS -->
+<section class="relative w-full py-space-2xl bg-surface-container-lowest" id="ia-automatizacion">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Content Column -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-loom-slate-surface border border-secondary/30 text-secondary font-code-badge text-code-badge uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#10b981]"></span>
+<span class="">Pilar 03 • Inteligencia Operacional</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+            Integración de IA &amp; Automatización de Procesos
+          </h2>
+<p class="font-body-lg text-body-lg text-text-muted">
+            Transformamos tareas manuales repetitivas en sistemas autónomos que trabajan 24 horas al día, 7 días a la semana. Conectamos modelos de lenguaje avanzados y agentes lógicos directo a los canales comerciales que ya utiliza tu cliente, como WhatsApp y tu CRM.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="p-space-md rounded-xl bg-loom-slate-surface border border-[#38312b] hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-2xl mb-space-xs block">support_agent</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Agentes WhatsApp 24/7</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Respuestas contextuales inmediatas, calificación de prospectos y agendamiento de citas sin intervención humana.</p>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-surface border border-[#38312b] hover:border-secondary/50 transition-all">
+<span class="material-symbols-outlined text-secondary text-2xl mb-space-xs block">calculate</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Cotizadores en Tiempo Real</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Calculadoras interactivas de presupuesto que entregan valor numérico instantáneo y capturan leads calientes.</p>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-surface border border-[#38312b] hover:border-tertiary/50 transition-all">
+<span class="material-symbols-outlined text-tertiary text-2xl mb-space-xs block">hub</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Sincronización Multicanal</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Conexión directa con HubSpot, Notion, Google Sheets o tu base de datos propietaria con validación de datos.</p>
+</div>
+<div class="p-space-md rounded-xl bg-loom-slate-surface border border-[#38312b] hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-2xl mb-space-xs block">insights</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Dashboards Analíticos</h4>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Visualización clara de patrones de compra, tasas de conversión y métricas clave para la junta directiva.</p>
+</div>
+</div>
+</div>
+<!-- Visual Column: AI Automation Flow Chart in Obsidian & Amber -->
+<div class="lg:col-span-6">
+<div class="p-space-xl rounded-2xl bg-loom-slate-surface border border-[#3d342d] shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-md border-b-0 mb-space-lg bg-loom-slate-elevated/70 border border-[#3a322c] rounded-xl px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary">memory</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">AI Workflow Topology</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f59e0b] animate-ping"></span>
+<span class="font-code-badge text-code-badge uppercase text-primary font-bold tracking-wider">Pipeline Live</span>
+</div>
+</div>
+<!-- Flow Representation -->
+<div class="space-y-space-md">
+<!-- Step 1: Input -->
+<div class="p-space-md rounded-xl bg-loom-slate-elevated border border-outline-variant/40 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary/15 border border-primary/35 flex items-center justify-center text-primary font-bold font-code-badge text-code-badge shadow-[0_0_8px_rgba(245,158,11,0.25)]">
+                    01
+                  </div>
+<div>
+<span class="font-label-md text-label-md text-text-primary font-semibold block">Prospecto Inicia Conversación en WhatsApp</span>
+<span class="font-body-sm text-body-sm text-text-muted">Consulta por producto o servicio empresarial</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">forum</span>
+</div>
+<!-- Connecting Line Downward -->
+<div class="flex justify-center -my-2">
+<span class="material-symbols-outlined text-primary text-lg animate-bounce">south</span>
+</div>
+<!-- Step 2: Processing AI -->
+<div class="p-space-md rounded-xl bg-loom-slate-elevated/90 border border-primary/40 shadow-[0_0_16px_rgba(245,158,11,0.18)] flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/50 flex items-center justify-center text-primary font-bold font-code-badge text-code-badge shadow-[0_0_10px_rgba(245,158,11,0.3)]">
+                    02
+                  </div>
+<div>
+<span class="font-label-md text-label-md text-text-primary font-semibold block">Agente IA de Telar Web Califica &amp; Cotiza</span>
+<span class="font-body-sm text-body-sm text-text-muted">Consulta base de conocimiento vectorial e inventario</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary">neurology</span>
+</div>
+<!-- Connecting Line Downward -->
+<div class="flex justify-center -my-2">
+<span class="material-symbols-outlined text-secondary text-lg animate-bounce">south</span>
+</div>
+<!-- Step 3: Trigger & Close -->
+<div class="p-space-md rounded-xl bg-loom-slate-elevated border border-outline-variant/40 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center text-secondary font-bold font-code-badge text-code-badge shadow-[0_0_8px_rgba(16,185,129,0.25)]">
+                    03
+                  </div>
+<div>
+<span class="font-label-md text-label-md text-text-primary font-semibold block">Registro en CRM &amp; Link de Pago Generado</span>
+<span class="font-body-sm text-body-sm text-text-muted">El ejecutivo recibe notificación con contexto completo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary">task_alt</span>
+</div>
+<!-- Guarantee Banner -->
+<div class="mt-space-md p-space-sm rounded-lg bg-loom-slate-elevated/60 border border-[#38312b] flex items-center gap-space-sm">
+<img alt="Telar" class="w-6 h-6 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hV5VrT_wGPmria_2LVou6Ls-b9glLo8SnD5MS8qGUu_nf7fMCywWnKE6BDIrSQn0hg2o6deLhY4h22WCWwu7lOOUWxgKKCvqeIeIvi6phQwmq2Uq3OSkfDZ7jK_opQKY5NiGOAcCqsjFLltHgebbdIrZBWV-YBKYhV-UKZwHi9sBmoHhF3kQYDXS7gEjGeUCJNOFCTT_TCXKJGVP_LN0n95Vr8QmLKnTRds2-J1fjMh_9za9JxyVcUxfDNtRZ_WW_A"/>
+<p class="font-label-sm text-label-sm text-text-muted">
+<strong class="text-text-primary">Privacidad estricta:</strong> Tus datos y los de tus clientes nunca son utilizados para re-entrenar modelos públicos externos.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FASES DE ENTREGA DEL SERVICIO (METHODOLOGY) -->
+<section class="relative w-full py-space-2xl bg-loom-slate-base">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="text-center max-w-3xl mx-auto mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-loom-slate-surface border border-primary/30 text-primary font-code-badge text-code-badge uppercase tracking-wider mb-space-md">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span>
+<span class="">Disciplina de Ingeniería</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+          Nuestras 4 Fases de Entrega de Servicio
+        </h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+          Un proceso transparente y predecible donde eliminas riesgos técnicos. Sabes exactamente qué se construye, en qué fecha y bajo qué acuerdos de común acuerdo.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Fase 1 -->
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface border border-[#38312b] shadow-md flex flex-col justify-between hover:border-primary/50 hover:bg-loom-slate-elevated transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-badge text-code-badge text-primary uppercase tracking-widest font-bold">Fase 01</span>
+<span class="material-symbols-outlined text-primary">contract</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">
+              Descubrimiento &amp; Acuerdo Técnico
+            </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Definimos metas de negocio, alcances no negociables y pactamos en común acuerdo el stack técnico ideal (lenguajes, bases de datos y alojamiento) según tu presupuesto.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-loom-slate-base/70 rounded-lg p-space-sm font-code-badge text-code-badge text-primary border border-primary/25">
+            Entregable: Acta de Alcance y Arquitectura
+          </div>
+</div>
+<!-- Fase 2 -->
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface border border-[#38312b] shadow-md flex flex-col justify-between hover:border-tertiary/50 hover:bg-loom-slate-elevated transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-badge text-code-badge text-tertiary uppercase tracking-widest font-bold">Fase 02</span>
+<span class="material-symbols-outlined text-tertiary">devices</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">
+              Diseño UI/UX Interactivo
+            </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Prototipado interactivo de alta fidelidad. Visualizas cómo navegará el usuario antes de escribir una sola línea de código, ajustando textos y flujos de conversión.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-loom-slate-base/70 rounded-lg p-space-sm font-code-badge text-code-badge text-tertiary border border-tertiary/25">
+            Entregable: Prototipo Navegable Aprobado
+          </div>
+</div>
+<!-- Fase 3 -->
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface border border-[#38312b] shadow-md flex flex-col justify-between hover:border-secondary/50 hover:bg-loom-slate-elevated transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-badge text-code-badge text-secondary uppercase tracking-widest font-bold">Fase 03</span>
+<span class="material-symbols-outlined text-secondary">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">
+              Desarrollo Ágil con Demos
+            </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Sprints semanales de programación. Tienes acceso a un servidor de pruebas en la nube para constatar avances tangibles cada semana, sin sorpresas finales.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-loom-slate-base/70 rounded-lg p-space-sm font-code-badge text-code-badge text-secondary border border-secondary/25">
+            Entregable: Demos Semanales en Staging
+          </div>
+</div>
+<!-- Fase 4 -->
+<div class="p-space-lg rounded-2xl bg-loom-slate-surface border border-[#38312b] shadow-md flex flex-col justify-between hover:border-primary/50 hover:bg-loom-slate-elevated transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-code-badge text-code-badge text-primary uppercase tracking-widest font-bold">Fase 04</span>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mb-space-xs">
+              Pruebas, Despliegue &amp; 100% Código
+            </h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+              Auditoría de seguridad, prueba de carga y lanzamiento a producción. Te transferimos el repositorio completo, accesos de nube y manuales de administración.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-loom-slate-base/70 rounded-lg p-space-sm font-code-badge text-code-badge text-primary border border-primary/25">
+            Entregable: Código 100% Tuyo &amp; Pase a Vivo
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN FAQ: ACORDEONES INTERACTIVOS -->
+<section class="relative w-full py-space-2xl bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto px-margin lg:px-margin-lg">
+<div class="text-center mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-loom-slate-surface border border-primary/30 text-primary font-code-badge text-code-badge uppercase tracking-wider mb-space-md">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#f59e0b]"></span>
+<span class="">Claridad Total</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+          Preguntas Frecuentes sobre Nuestros Servicios
+        </h2>
+<p class="font-body-md text-body-md text-text-muted mt-space-sm">
+          Resolvemos las inquietudes técnicas, financieras y contractuales más habituales antes de comenzar.
+        </p>
+</div>
+<div class="space-y-space-md" id="faq-container">
+<!-- Item 1 -->
+<div class="rounded-xl bg-loom-slate-surface border border-[#38312b] overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full py-space-lg px-space-lg text-left flex items-center justify-between gap-space-md faq-trigger hover:bg-loom-slate-elevated transition-colors">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">¿Cuáles son los tiempos promedio de entrega de un proyecto?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200 transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-text-muted">
+            Para una landing page corporativa de alto rendimiento, el ciclo promedio es de <strong class="text-text-primary">2 a 3 semanas</strong>. Para una plataforma web compleja o e-commerce a medida con integraciones profundas y agentes IA, el cronograma habitual oscila entre <strong class="text-text-primary">5 a 8 semanas</strong>, estructurado en sprints semanales con entregables verificables en staging.
+          </div>
+</div>
+<!-- Item 2 -->
+<div class="rounded-xl bg-loom-slate-surface border border-[#38312b] overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full py-space-lg px-space-lg text-left flex items-center justify-between gap-space-md faq-trigger hover:bg-loom-slate-elevated transition-colors">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">¿Tendré costos obligatorios de mantenimiento o ataduras mensuales?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200 transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-text-muted">
+<strong class="text-text-primary">No hay ataduras ni mensualidades obligatorias por software.</strong> Al culminar el proyecto entregamos el 100% de la propiedad del código fuente y configuramos la infraestructura a tu nombre (AWS, Google Cloud, Vercel, o el servidor de tu preferencia). Ofrecemos pólizas opcionales de mantenimiento evolutivo para empresas que prefieren delegar soporte 24/7, pero tú mantienes la total autonomía técnica de tu software.
+          </div>
+</div>
+<!-- Item 3 -->
+<div class="rounded-xl bg-loom-slate-surface border border-[#38312b] overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full py-space-lg px-space-lg text-left flex items-center justify-between gap-space-md faq-trigger hover:bg-loom-slate-elevated transition-colors">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">¿Cómo definen qué tecnologías o lenguajes usar en mi proyecto?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200 transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-text-muted">
+            En Telar Web <strong class="text-text-primary">no imponemos tecnologías dogmáticas</strong>. La selección del stack se pacta en <em class="text-primary font-semibold">común acuerdo</em> durante la Fase de Descubrimiento Técnico, analizando el volumen de tráfico esperado, la facilidad de mantenimiento por parte de tu equipo interno, costos de servidores en la nube y el objetivo comercial exacto de la solución.
+          </div>
+</div>
+<!-- Item 4 -->
+<div class="rounded-xl bg-loom-slate-surface border border-[#38312b] overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full py-space-lg px-space-lg text-left flex items-center justify-between gap-space-md faq-trigger hover:bg-loom-slate-elevated transition-colors">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">¿Cómo funcionan los agentes de IA en WhatsApp y CRM?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200 transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-text-muted">
+            Conectamos la API oficial de WhatsApp con tu base de datos y un modelo inteligente configurado exclusivamente con tus listas de precios, políticas y FAQs. El agente atiende en lenguaje natural, califica al cliente potencial, genera links de cotización y transfiere la conversación con el historial ordenado a tu asesor comercial si se requiere intervención humana.
+          </div>
+</div>
+<!-- Item 5 -->
+<div class="rounded-xl bg-loom-slate-surface border border-[#38312b] overflow-hidden shadow-sm">
+<button aria-expanded="false" class="w-full py-space-lg px-space-lg text-left flex items-center justify-between gap-space-md faq-trigger hover:bg-loom-slate-elevated transition-colors">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">¿Emiten factura legal y contrato de confidencialidad (NDA)?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200 transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-lg font-body-md text-body-md text-text-muted">
+            Absolutamente. Somos una sociedad legalmente constituida en Bogotá, Colombia (Telar Web S.A.S.). Todos nuestros contratos contemplan factura electrónica oficial con RUT, cláusulas formales de confidencialidad (NDA), cesión irrevocable de derechos patrimoniales de autor sobre el código y garantía técnica post-entrega.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- BANNER CTA FINAL: COTIZADOR & WHATSAPP DIRECTO -->
+<section class="relative w-full py-space-2xl bg-loom-slate-base overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg">
+<div class="relative rounded-2xl bg-gradient-to-br from-loom-slate-elevated via-loom-slate-surface to-surface-container-lowest border border-primary/30 p-space-xl lg:p-space-2xl shadow-[0_0_50px_rgba(217,119,6,0.18)] overflow-hidden">
+<!-- Background decorative ambient threads -->
+<div class="pointer-events-none absolute -top-12 -right-12 w-96 h-96 bg-primary/15 blur-[120px] rounded-full"></div>
+<div class="pointer-events-none absolute -bottom-12 -left-12 w-96 h-96 bg-tertiary-container/15 blur-[120px] rounded-full"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<img alt="Telar Logo" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/50 shadow-[0_0_12px_rgba(245,158,11,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeAuOQpXjo8S3_gknaVLXUaI5-jD1f-wp32SJVXdDnjQrbwpv0fXVpdrt1qz61WRqBGv__tzQGcvYziwQ_0U6E6MWY_f8sY5qYOsQgC-cBsZ-eh8YJwaGI9c8mRQ_xrwZFjVdDhmBTXOtpgRk7xlEPIMdJbQGWoL04pVLyCsbfDE_f6ieojrO4F_YOBH0XlaNyIvB-nqOklWl5ZolT6Qne8WRxh6MF0ZFI5lMuV_vKVTElEb141uVaBKCwD46G04DMNQ"/>
+<span class="font-code-badge text-code-badge uppercase text-primary tracking-wider font-bold">Garantía de Precisión Telar</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">
+              ¿Listo para dotar a tu empresa de una infraestructura web invencible?
+            </h2>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl">
+              Usa nuestro cotizador guiado interactivo para seleccionar tus requerimientos exactos en menos de 3 minutos, o comunícate vía WhatsApp para recibir una sesión de diagnóstico sin costo.
+            </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-lg bg-gradient-to-r from-primary to-primary-container text-surface-container-lowest font-label-md text-label-md font-bold shadow-[0_0_28px_rgba(245,158,11,0.45)] hover:shadow-[0_0_36px_rgba(245,158,11,0.65)] hover:brightness-110 transition-all" data-path="cotizador" href="#">
+<span class="material-symbols-outlined font-bold">calculate</span>
+<span class="">Abrir Cotizador Guiado</span>
+</a>
+<a class="w-full inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-lg bg-loom-slate-surface border border-primary/40 text-primary font-label-md text-label-md font-bold hover:bg-loom-slate-elevated hover:text-white transition-all shadow-md" href="https://wa.me/573100000000" target="_blank">
+<span class="material-symbols-outlined text-primary">chat</span>
+<span class="">Hablar por WhatsApp Directo</span>
+</a>
+</div>
+</div>
+<!-- Footnote guarantee banner inside card -->
+<div class="relative z-10 mt-space-xl pt-space-md border-t border-[#3d342d] flex flex-wrap items-center justify-between gap-space-md text-text-muted font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base font-bold">check</span>
+<span class="">Respuesta en menos de 2 horas hábiles</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-base font-bold">check</span>
+<span class="">Diagnóstico de arquitectura inicial 100% gratuito</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base font-bold">check</span>
+<span class="">Póliza de soporte y código entregado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Accordion Logic -->
+<script>
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.faq-icon');
+
+        // Close other FAQs
+        document.querySelectorAll('.faq-trigger').forEach(other => {
+          if (other !== trigger) {
+            other.setAttribute('aria-expanded', 'false');
+            other.nextElementSibling.classList.add('hidden');
+            const otherIcon = other.querySelector('.faq-icon');
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle clicked FAQ
+        if (expanded) {
+          trigger.setAttribute('aria-expanded', 'false');
+          content.classList.add('hidden');
+          if (icon) icon.style.transform = 'rotate(0deg)';
+        } else {
+          trigger.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-[#2e2924]"><div class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-lg"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-md"><img alt="Telar Web" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40 shadow-[0_0_12px_rgba(245,158,11,0.25)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Pfo1pz-SJfEkR4-QdJ6V-QmKjeDLyQcR1_h-dWSBOhVK1fUvIrpHfGwyP5CZ6olJYhxxe5PNwye7slGPmHJE8Jj1PsRBwJ5Z9rGMVlKpk3uaceqesBHqubgVYQlmG35d6-vi8DwHtnNlov2JkTo1R8tkVarR5pLsuES4I3aBdKmDj21zEqzfLmLHaKq6KhCduxigMa0zx_VXN5spZtLrCEOg5_E8p8elCc1EafKcZPZVUfz88OH0_k02VHpecKIlCQ"/><span class="font-headline-md text-headline-md text-text-primary font-bold">Telar Web</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-sm">Arquitectura de software de alto impacto y productos web hechos a la medida desde Colombia para compañías globales. Precisión técnica, transparencia radical e ingeniería de clase mundial.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span><span class="font-code-badge text-code-badge uppercase text-primary font-bold">Software Craftsmanship • LatAm Hub</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-md"><h4 class="font-label-md text-label-md text-text-primary font-bold uppercase tracking-wider">Navegación</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-text-muted"><li class=""><a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="servicios" href="#">Servicios</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="proceso-y-acuerdo" href="#">Proceso &amp; Acuerdo</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="casos-de-exito" href="#">Casos de Éxito</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="cotizador" href="#">Cotizador online</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-md"><h4 class="font-label-md text-label-md text-text-primary font-bold uppercase tracking-wider">Líneas Telar</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-text-muted"><div class="group"><span class="text-text-primary font-bold block group-hover:text-primary transition-colors">Telar Web</span><span class="font-label-sm text-label-sm text-text-muted/80">SaaS, aplicaciones web escalables y plataformas a medida</span></div><div class="group"><span class="text-text-primary font-bold block group-hover:text-primary transition-colors">Telar Monitor</span><span class="font-label-sm text-label-sm text-text-muted/80">Observabilidad cloud y telemetría de sistemas críticos</span></div><div class="group"><span class="text-text-primary font-bold block group-hover:text-primary transition-colors">Telar Lab</span><span class="font-label-sm text-label-sm text-text-muted/80">I+D, prototipado rápido y modelos de Inteligencia Artificial</span></div></div></div><div class="lg:col-span-3 flex flex-col gap-space-md"><h4 class="font-label-md text-label-md text-text-primary font-bold uppercase tracking-wider">Contacto &amp; Hub</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-text-muted"><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-base">location_on</span><span class="">Bogotá D.C., Colombia (GMT-5)</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-base">chat</span><a class="hover:text-primary transition-colors" href="#">WhatsApp Directo: (+57) 310 000 0000</a></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-base">mail</span><a class="hover:text-primary transition-colors" href="#">hola@telarweb.co</a></li></ul><div class="pt-space-xs"><a class="inline-flex items-center justify-center px-space-md py-space-xs rounded-lg bg-loom-slate-elevated border border-primary/40 text-primary hover:bg-primary hover:text-surface-container-lowest transition-colors font-label-sm text-label-sm font-bold shadow-sm" data-path="cotizador" href="#">Iniciar Consulta Directa →</a></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-text-muted font-label-sm text-label-sm border-t border-[#2e2924]"><p class="">© 2025 Telar Web S.A.S. Todos los derechos reservados. Desarrollado con tecnología de punta en Bogotá, Colombia.</p><div class="flex items-center gap-space-lg"><a class="hover:text-text-primary transition-colors" href="#">Términos de Servicio</a><a class="hover:text-text-primary transition-colors" href="#">Política de Privacidad</a><a class="hover:text-text-primary transition-colors" href="#">Seguridad</a></div></div></div></footer>
+</body></html>
