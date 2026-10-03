@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function QuoterTeaser() {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#121110] to-[#1a1816]">
+    <section id="cotizador" className="py-24 relative overflow-hidden bg-gradient-to-b from-[#121110] to-[#1a1816]">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent opacity-50" />
       <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />

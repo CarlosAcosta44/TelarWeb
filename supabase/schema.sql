@@ -49,3 +49,37 @@ FOR UPDATE
 TO authenticated
 USING (true)
 WITH CHECK (true);
+
+-- ========================================================
+-- Table: contact_messages
+-- ========================================================
+
+CREATE TABLE IF NOT EXISTS public.contact_messages (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name TEXT NOT NULL,
+    company TEXT,
+    email TEXT NOT NULL,
+    message TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'unread' CHECK (status IN ('unread', 'read', 'replied')),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Indices for performance
+CREATE INDEX IF NOT EXISTS idx_contact_messages_created_at ON public.contact_messages (created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_contact_messages_status ON public.contact_messages (status);
+
+-- Enable Row Level Security (RLS)
+ALTER TABLE public.contact_messages ENABLE ROW LEVEL SECURITY;
+
+-- 1. Insert Policy: Allow anonymous and public visitors to submit new contact messages
+CREATE POLICY "Allow public insert to contact_messages" 
+ON public.contact_messages
+FOR INSERT 
+TO anon, authenticated
+WITH CHECK (true);
+
+-- 2. Select, Update Policies for authenticated team members
+CREATE POLICY "Allow authenticated read on contact_messages" 
+ON public.contact_messages FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Allow authenticated update on contact_messages" 
+ON public.contact_messages FOR UPDATE TO authenticated USING (true) WITH CHECK (true);

@@ -1,18 +1,34 @@
 'use client';
 
 import React, { useState } from 'react';
+import { submitContactAction } from '@/app/actions';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulating API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert('Mensaje enviado exitosamente. Te contactaremos pronto.');
-    }, 1500);
+    setStatusMessage(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      company: formData.get('company') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+    };
+
+    const result = await submitContactAction(data);
+
+    setIsSubmitting(false);
+    if (result.success) {
+      setStatusMessage({ type: 'success', text: 'Mensaje enviado exitosamente. Te contactaremos pronto.' });
+      (e.target as HTMLFormElement).reset();
+    } else {
+      setStatusMessage({ type: 'error', text: result.error });
+    }
   };
 
   return (
@@ -65,6 +81,7 @@ export default function Contact() {
                     <label className="text-sm font-medium text-neutral-300">Nombre completo</label>
                     <input 
                       type="text" 
+                      name="name"
                       required
                       className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all placeholder-neutral-600"
                       placeholder="Ej. Juan Pérez"
@@ -74,6 +91,7 @@ export default function Contact() {
                     <label className="text-sm font-medium text-neutral-300">Empresa / Proyecto</label>
                     <input 
                       type="text" 
+                      name="company"
                       className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all placeholder-neutral-600"
                       placeholder="Ej. Mi Tienda S.A."
                     />
@@ -84,6 +102,7 @@ export default function Contact() {
                   <label className="text-sm font-medium text-neutral-300">Correo electrónico</label>
                   <input 
                     type="email" 
+                    name="email"
                     required
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all placeholder-neutral-600"
                     placeholder="tucorreo@ejemplo.com"
@@ -93,12 +112,19 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-neutral-300">¿En qué podemos ayudarte?</label>
                   <textarea 
+                    name="message"
                     required
                     rows={4}
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all resize-none placeholder-neutral-600"
                     placeholder="Cuéntanos brevemente sobre tu negocio y qué buscas lograr en internet..."
                   />
                 </div>
+
+                {statusMessage && (
+                  <div className={`p-4 rounded-xl text-sm font-medium ${statusMessage.type === 'success' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'}`}>
+                    {statusMessage.text}
+                  </div>
+                )}
 
                 <button 
                   type="submit" 
