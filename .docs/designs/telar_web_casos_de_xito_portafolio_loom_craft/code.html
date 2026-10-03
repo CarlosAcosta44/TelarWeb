@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Telar Web - Casos de Éxito &amp; Portafolio de Software Artesanal</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#151311",
+            "on-background": "#f5f2eb",
+            "surface-bright": "#3b3936",
+            "inverse-on-surface": "#32302e",
+            "on-tertiary-container": "#4d1900",
+            "surface-container-highest": "#2e2a26",
+            "outline-variant": "#3d3630",
+            "tertiary-fixed-dim": "#ffb596",
+            "error-container": "#93000a",
+            "on-tertiary-fixed": "#360f00",
+            "secondary-fixed": "#89f5e7",
+            "tertiary": "#e07a5f",
+            "on-primary": "#2b1400",
+            "tertiary-fixed": "#ffdbcd",
+            "on-tertiary-fixed-variant": "#7d2d00",
+            "primary": "#f59e0b",
+            "outline": "#8c7f76",
+            "surface-container-high": "#272320",
+            "on-secondary": "#003732",
+            "on-primary-fixed": "#2f1500",
+            "on-secondary-fixed": "#00201d",
+            "primary-container": "#d97706",
+            "secondary": "#10b981",
+            "primary-fixed": "#fef3c7",
+            "on-primary-container": "#432100",
+            "surface-dim": "#11100f",
+            "surface-container-lowest": "#0c0b0a",
+            "on-primary-fixed-variant": "#6e3900",
+            "on-tertiary": "#581e00",
+            "on-secondary-container": "#00302b",
+            "surface-tint": "#f59e0b",
+            "secondary-container": "#0d9488",
+            "inverse-surface": "#f5f2eb",
+            "on-error-container": "#ffdad6",
+            "inverse-primary": "#d97706",
+            "on-surface": "#f5f2eb",
+            "surface-container": "#1e1b18",
+            "on-surface-variant": "#a8a29e",
+            "surface-variant": "#2b2723",
+            "secondary-fixed-dim": "#6bd8cb",
+            "background": "#121110",
+            "tertiary-container": "#c25e3f",
+            "primary-fixed-dim": "#fbbf24",
+            "on-secondary-fixed-variant": "#005049",
+            "surface-container-low": "#181614",
+            "error": "#ffb4ab",
+            "on-error": "#690005",
+            "loom-copper": "#d97706",
+            "loom-amber": "#f59e0b",
+            "loom-sage": "#10b981",
+            "loom-cream": "#f5f2eb",
+            "loom-oatmeal": "#a8a29e",
+            "loom-slate-base": "#121110",
+            "loom-slate-surface": "#181614",
+            "loom-slate-elevated": "#24211e"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin": "1.5rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin-md": "3rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "margin-lg": "5rem",
+            "space-2xl": "4rem",
+            "gutter-lg": "2rem"
+          },
+          fontFamily: {
+            "code-badge": ["JetBrains Mono", "monospace"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["JetBrains Mono", "monospace"],
+            "headline-xl-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          fontSize: {
+            "code-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#121110] font-body-md text-on-surface antialiased min-h-screen relative selection:bg-amber-600 selection:text-white">
+<!-- 1. NAVBAR -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#121110]/90 backdrop-blur-xl border-b border-[#3d3630]/60 shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+<div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-lg flex items-center justify-between gap-gutter">
+<!-- Izquierda: Logo y Texto Telar Web -->
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-md group" data-path="inicio" href="#">
+<img alt="Telar Web" class="w-8 h-8 rounded-full object-cover ring-1 ring-amber-600/40 shadow-[0_0_14px_rgba(245,158,11,0.25)] transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSw6y939d1AAlYmqb7gxbQf2rPLlgKko8T_Rleh-pBpU-Fk3rwQUZTdWv0mNMx6pgHAjQWNSJDJAupuoyfg2G5_ePye4cQAbcL8OlHQfMZbm20MWLVa-wG3Fg--7MFZS3Pi8FrP7MnFQwIzNaBOeQZQO1YR_b-QMt5Aont4SiiyXUVIQed5OwwxPnk7dgfQKh3EWrkrBZMNM46Xj71xOSO0R5jsJICv9TFzwmuPqzurbuj37m9s1H1xnrHGUurdFkMKA"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-loom-cream tracking-tight font-bold group-hover:text-primary transition-colors">Telar Web</span>
+</div>
+</a>
+</div>
+<!-- Centro: Enlaces de navegación con Casos de Éxito activo -->
+<nav class="hidden lg:flex items-center gap-space-xs">
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="inicio" href="#">Inicio</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="servicios" href="#">Servicios</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="proceso-y-acuerdo" href="#">Proceso &amp; Acuerdo</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-primary bg-surface-container-high border border-amber-600/40 shadow-[0_0_16px_rgba(217,119,6,0.2)] font-bold transition-all" data-path="casos-de-exito" href="#">Casos de Éxito</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="cotizador" href="#">Cotizador</a>
+</nav>
+<!-- Derecha: Botón Cotizar proyecto en ámbar cálido -->
+<div class="flex items-center gap-space-md">
+<a class="hidden sm:inline-flex items-center justify-center gap-2 px-space-lg py-space-sm rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 text-[#1a1105] font-label-md text-label-md font-bold shadow-[0_0_24px_rgba(217,119,6,0.35)] hover:from-amber-500 hover:to-amber-400 hover:shadow-[0_0_32px_rgba(245,158,11,0.5)] transition-all" data-path="cotizador" href="#">
+<span>Cotizar proyecto</span>
+<span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN WRAPPER -->
+<main class="w-full pt-20 bg-[#121110] min-h-[calc(100vh-80px)]">
+<div class="flex flex-col w-full">
+<!-- Glow canvas ambient background -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/4 w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+<div class="absolute top-96 -right-24 w-[480px] h-[480px] bg-amber-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="absolute top-[1600px] left-[-100px] w-[540px] h-[540px] bg-emerald-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+<!-- 2. HERO DE CASOS DE ÉXITO -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg pt-space-xl pb-space-2xl">
+<div class="flex flex-col gap-space-md max-w-4xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/90 border border-amber-600/30 w-fit backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-primary -ml-2.5"></span>
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary font-bold">• TELAR WEB / PROYECTOS DESPLEGADOS •</span>
+<span class="text-on-surface-variant font-code-badge text-code-badge">LatAm 2024-2025</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-loom-cream tracking-tight">
+              Resultados Reales en <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-emerald-400">Negocios Reales</span>
+</h1>
+<p class="font-body-lg text-body-lg text-loom-oatmeal leading-relaxed">
+              Descubre cómo pymes, marcas y profesionales colombianos multiplicaron sus ventas, optimizaron su operación y consolidaron su visibilidad con software web de alto rendimiento y arquitectura a medida.
+            </p>
+</div>
+<!-- Quick Metrics Ribbon (Warm Charcoal / Amber / Sage) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-2xl bg-surface-container-low/90 border border-outline-variant/50 backdrop-blur-md p-space-lg rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.6)]">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight drop-shadow-[0_0_12px_rgba(245,158,11,0.25)]">+210%</span>
+<span class="font-body-sm text-body-sm text-loom-oatmeal">Promedio en captación de leads</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight drop-shadow-[0_0_12px_rgba(245,158,11,0.25)]">&lt; 1.0s</span>
+<span class="font-body-sm text-body-sm text-loom-oatmeal">Velocidad de carga Core Web Vitals</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight drop-shadow-[0_0_12px_rgba(245,158,11,0.25)]">99.98%</span>
+<span class="font-body-sm text-body-sm text-loom-oatmeal">Uptime en arquitecturas cloud</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight drop-shadow-[0_0_12px_rgba(245,158,11,0.25)]">3.2x</span>
+<span class="font-body-sm text-body-sm text-loom-oatmeal">Retorno de inversión medido a 90 días</span>
+</div>
+</div>
+<!-- Project Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-sm mt-space-2xl pb-space-sm" id="case-filters">
+<button class="filter-btn active px-space-lg py-space-sm rounded-lg bg-surface-container-high text-loom-cream border border-amber-600/40 font-label-md text-label-md font-bold shadow-[0_0_14px_rgba(217,119,6,0.25)] transition-all flex items-center gap-space-xs" data-filter="all">
+<span class="material-symbols-outlined text-sm text-primary">apps</span>
+              Todos (4)
+            </button>
+<button class="filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-loom-cream hover:bg-surface-container hover:border-amber-600/30 font-label-md text-label-md transition-all flex items-center gap-space-xs" data-filter="corporativo">
+<span class="material-symbols-outlined text-sm">domain</span>
+              Corporativo &amp; Landing Pages
+            </button>
+<button class="filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-loom-cream hover:bg-surface-container hover:border-amber-600/30 font-label-md text-label-md transition-all flex items-center gap-space-xs" data-filter="ecommerce">
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+              E-commerce &amp; Ventas
+            </button>
+<button class="filter-btn px-space-lg py-space-sm rounded-lg bg-surface-container-low border border-outline-variant/40 text-on-surface-variant hover:text-loom-cream hover:bg-surface-container hover:border-amber-600/30 font-label-md text-label-md transition-all flex items-center gap-space-xs" data-filter="software">
+<span class="material-symbols-outlined text-sm">terminal</span>
+              Automatización &amp; Software a Medida
+            </button>
+</div>
+</section>
+<!-- 3. SECCIÓN DE CASOS DE ÉXITO DETALLADOS (4 CASOS) -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg pb-space-2xl flex flex-col gap-space-2xl" id="cases-container">
+<!-- Caso 01: Logística Andina SAS -->
+<article class="case-card group bg-surface-container/80 border border-outline-variant/40 hover:border-amber-600/40 backdrop-blur-xl rounded-2xl p-space-lg lg:p-space-xl shadow-xl transition-all duration-300" data-category="corporativo software">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Visual Mockup Showcase -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-2 lg:order-1">
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/50 p-space-md shadow-2xl">
+<!-- Glass Window Header Inside Mockup -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high/70 px-space-md py-space-xs rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="ml-space-sm font-code-badge text-code-badge text-loom-oatmeal">portal.logisticaandina.co/cotizador-v2</span>
+</div>
+<span class="font-code-badge text-code-badge text-primary font-bold">LATENCIA: 32ms</span>
+</div>
+<img class="w-full h-72 md:h-80 object-cover rounded-lg sepia-[0.1] contrast-[1.05]" data-alt="High tech digital logistics dashboard platform displayed on a modern laptop and mobile phone screen. Intricate glowing teal and amber data flows showing supply chain fleet metrics, dispatch tracking charts, automated quote calculator, and dark UI with cyan cybernetic luminescence against a dark slate cosmic backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwwvWjBapZ8ESnI7M3WjC0GXACFz42sUfUu3UnL_IJad8Kosz0q9yOr20CGVsdbaDeTVpnfjx_sbK2L5wa1Znq1CUjnS8NpP4hUtiba90IghJfmv7iOEgfsnRCRZqeecnljF3qbVTtx7avwt5KVwFG2iq4UxK6L-ll0f8V5W1hqVtBD5gUVXRd3jhdyLRcQVqEKKuuTDTkCnxtapU9FRBIOTgDTjB7Qx9IsGETV_rIZ0vCNLVadkZo"/>
+<!-- Floating Micro Stat Overlay -->
+<div class="absolute -bottom-2 right-6 bg-surface-dim/95 border border-amber-600/30 backdrop-blur-xl p-space-md rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.7)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">0.9 seg</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Carga total desde Bogotá (vs 8.4s)</p>
+</div>
+</div>
+</div>
+<!-- Client & Tags -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">local_shipping</span>
+<span class="font-label-sm text-label-sm text-loom-cream font-bold uppercase tracking-wider">Transporte &amp; Cadena de Suministro</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Next.js 14</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary border border-secondary/20 font-code-badge text-code-badge uppercase">PostgreSQL</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">WhatsApp API</span>
+</div>
+</div>
+</div>
+<!-- Case Study Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-1 lg:order-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary bg-amber-500/10 border border-amber-500/25 px-space-sm py-space-xs rounded-full font-bold">Caso 01 / Corporativo &amp; Tech</span>
+<span class="text-loom-oatmeal font-label-sm text-label-sm">Sector Transporte B2B</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+                  Logística Andina SAS: De cotizaciones manuales lentas a un sistema digital con +210% en captación
+                </h2>
+<div class="space-y-space-md mt-space-xs">
+<!-- Desafío -->
+<div class="bg-surface-container-lowest/70 border border-outline-variant/30 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-error font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">warning</span> El Desafío
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Sitio web obsoleto de 8.4 segundos de carga inicial, con formularios estáticos desatendidos. Las cotizaciones de carga pesada nacional tomaban hasta 24 horas hábiles por correo, perdiendo el 60% de los prospectos frente a competidores más ágiles.
+                    </p>
+</div>
+<!-- Solución Telar Web -->
+<div class="bg-surface-container-lowest/70 border border-amber-600/25 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">tune</span> La Solución Telar Web
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Diseño de un portal corporativo ultraligero con un <strong class="text-loom-cream">motor de cotización algorítmica en tiempo real</strong>. El cliente calcula ruta, tonelaje y recibe la tarifa al instante, mientras se activa un bot sincronizado con CRM HubSpot y WhatsApp para el equipo comercial en Medellín y Bogotá.
+                    </p>
+</div>
+</div>
+<!-- Resultados Clave Grid -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-sm pt-space-sm bg-surface-container-high/60 border border-outline-variant/40 p-space-md rounded-xl">
+<div>
+<p class="font-headline-md text-headline-md font-bold text-primary">+210%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Leads calificados al mes</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-secondary">0.9 seg</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Carga promedio ultra rápida</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-loom-cream">80%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Cotizaciones 100% automatizadas</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Caso 02: Clínica Dental Sonrisas -->
+<article class="case-card group bg-surface-container/80 border border-outline-variant/40 hover:border-secondary/40 backdrop-blur-xl rounded-2xl p-space-lg lg:p-space-xl shadow-xl transition-all duration-300" data-category="software corporativo">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Case Study Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-secondary bg-emerald-500/10 border border-secondary/25 px-space-sm py-space-xs rounded-full font-bold">Caso 02 / Salud &amp; Agendamiento</span>
+<span class="text-loom-oatmeal font-label-sm text-label-sm">Red Odontológica Especializada</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+                  Clínica Dental Sonrisas: Descongestión total de recepción y cero citas duplicadas con agendador inteligente
+                </h2>
+<div class="space-y-space-md mt-space-xs">
+<!-- Desafío -->
+<div class="bg-surface-container-lowest/70 border border-outline-variant/30 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-error font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">call_end</span> El Desafío
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Líneas telefónicas saturadas en horas pico, abandono de llamadas superior al 45% y constante solapamiento de turnos entre 8 odontólogos especialistas. Los pacientes desistían y optaban por otras clínicas del sector de Chapinero y Usaquén.
+                    </p>
+</div>
+<!-- Solución Telar Web -->
+<div class="bg-surface-container-lowest/70 border border-secondary/25 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-secondary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">event_available</span> La Solución Telar Web
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Arquitectura web integral de citas en línea sincronizada con Google Calendar institucional y notificaciones automatizadas vía SMS y WhatsApp. Selector visual de doctor, sucursal, horario libre y prepago opcional de consulta diagnóstica.
+                    </p>
+</div>
+</div>
+<!-- Resultados Clave Grid -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-sm pt-space-sm bg-surface-container-high/60 border border-outline-variant/40 p-space-md rounded-xl">
+<div>
+<p class="font-headline-md text-headline-md font-bold text-secondary">65%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Citas agendadas por la web</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-primary">0</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Citas duplicadas registradas</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-loom-cream">-70%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Carga de recepción física</p>
+</div>
+</div>
+</div>
+<!-- Visual Mockup Showcase -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/50 p-space-md shadow-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high/70 px-space-md py-space-xs rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="ml-space-sm font-code-badge text-code-badge text-loom-oatmeal">citas.sonrisasdental.co/agenda-directa</span>
+</div>
+<span class="font-code-badge text-code-badge text-secondary font-bold">CALENDARIO EN VIVO</span>
+</div>
+<img class="w-full h-72 md:h-80 object-cover rounded-lg sepia-[0.1] contrast-[1.05]" data-alt="Futuristic web application interface for a medical and dental clinic calendar. Clean glassmorphism layout showing doctor schedules, interactive booking flow, patient timeline, illuminated appointment slots in sky blue and amber accents, with crisp typography and modern responsive mobile preview alongside." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMJisFO2vTiBCkmfOe2zuFO57YMQG8ahZiyPnKyHA0YH_BY0L9N0zaYyohIZKibzA0364m4CFmH84jCbho6732rbiHMvfsmBaIQaG6m1xWXlR9mO72zNXaitWPlrEfIV0uEWETel1Pw2UH9gDbfO2Y2jrwiC9qYvFwGZxyBizqkp6DgbSRFEUzcE2ncFNuiGJvWzNXCN60WkzIkle4ZSgzY07dd6yaHl2U03TZWsxDpVrvZuQX7kWu"/>
+<!-- Floating Micro Stat Overlay -->
+<div class="absolute -bottom-2 left-6 bg-surface-dim/95 border border-secondary/30 backdrop-blur-xl p-space-md rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.7)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">24/7 Autogestión</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Pacientes reservando en horario no laboral</p>
+</div>
+</div>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">health_and_safety</span>
+<span class="font-label-sm text-label-sm text-loom-cream font-bold uppercase tracking-wider">HealthTech &amp; Automatización</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">React</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary border border-secondary/20 font-code-badge text-code-badge uppercase">Supabase Auth</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Twilio Sync</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Caso 03: Boutique Café Origen -->
+<article class="case-card group bg-surface-container/80 border border-outline-variant/40 hover:border-amber-600/40 backdrop-blur-xl rounded-2xl p-space-lg lg:p-space-xl shadow-xl transition-all duration-300" data-category="ecommerce">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Visual Mockup Showcase -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-2 lg:order-1">
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/50 p-space-md shadow-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high/70 px-space-md py-space-xs rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="ml-space-sm font-code-badge text-code-badge text-loom-oatmeal">cafeorigen.co/checkout-nacional</span>
+</div>
+<span class="font-code-badge text-code-badge text-primary font-bold">WOMPI &amp; PAYU READY</span>
+</div>
+<img class="w-full h-72 md:h-80 object-cover rounded-lg sepia-[0.1] contrast-[1.05]" data-alt="High converting specialty coffee online store e-commerce screen. Artisanal coffee bags photographed with dramatic moody studio lighting, interactive grind selector, live shipping rates calculator to Colombian cities, dark cosmic slate interface with glowing golden amber buttons and clean checkout flow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr03o0hoMTT9cmHo9QEPcBItggcteN9pW_Tt8AODZ1fdjgcHVHSrfqQVJ6BYNl7WgIp5NhBEQcraGBDN5m5KHgWIoss5xENJrygqvJx4GNie4WbJjfgpgxInd3kYTHKRc-84eIuOLO_vSnMC-kH54m9Kq_o2nqBVLLB5ytV-0KC6ArNzVthPrElLkm9BgatWQpVpMCWmWb9ebiuhtw3Awq-Lq0nBEeGJu5jwDQCfaMtZmo6dijIvqV"/>
+<!-- Floating Micro Stat Overlay -->
+<div class="absolute -bottom-2 right-6 bg-surface-dim/95 border border-amber-600/30 backdrop-blur-xl p-space-md rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.7)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">3x Ingresos</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Crecimiento digital en los primeros 90 días</p>
+</div>
+</div>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-sm">storefront</span>
+<span class="font-label-sm text-label-sm text-loom-cream font-bold uppercase tracking-wider">E-commerce Direct-to-Consumer</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Shopify Headless</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary border border-secondary/20 font-code-badge text-code-badge uppercase">Wompi / PSE</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Coordinadora API</span>
+</div>
+</div>
+</div>
+<!-- Case Study Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md order-1 lg:order-2">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary bg-amber-500/10 border border-amber-500/25 px-space-sm py-space-xs rounded-full font-bold">Caso 03 / E-Commerce &amp; Retail</span>
+<span class="text-loom-oatmeal font-label-sm text-label-sm">Café Especial Colombiano</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+                  Boutique Café Origen: De cafetería local a despachos en 14 ciudades triplicando su facturación
+                </h2>
+<div class="space-y-space-md mt-space-xs">
+<!-- Desafío -->
+<div class="bg-surface-container-lowest/70 border border-outline-variant/30 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-error font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">store</span> El Desafío
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Ventas restringidas a su tienda física en Armenia (Quindío). Probaron marketplaces convencionales donde las comisiones del 18-25% destruían su margen de ganancia y no les permitían retener los datos ni la lealtad del cliente.
+                    </p>
+</div>
+<!-- Solución Telar Web -->
+<div class="bg-surface-container-lowest/70 border border-amber-600/25 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">local_shipping</span> La Solución Telar Web
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Desarrollo de e-commerce D2C ultra veloz con pasarelas de pago integradas (Wompi, Bancolombia, Nequi y Tarjetas) y cotizador automático de envíos conectado con transportadoras locales en tiempo real, junto con un modelo de suscripción mensual recurrente.
+                    </p>
+</div>
+</div>
+<!-- Resultados Clave Grid -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-sm pt-space-sm bg-surface-container-high/60 border border-outline-variant/40 p-space-md rounded-xl">
+<div>
+<p class="font-headline-md text-headline-md font-bold text-primary">14</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Ciudades con envíos activos mes 1</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-secondary">300%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Aumento facturación a 90 días</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-loom-cream">0%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Comisiones a terceros intermediarios</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Caso 04: Fintech Alpha Capital -->
+<article class="case-card group bg-surface-container/80 border border-outline-variant/40 hover:border-secondary/40 backdrop-blur-xl rounded-2xl p-space-lg lg:p-space-xl shadow-xl transition-all duration-300" data-category="software">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Case Study Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-secondary bg-emerald-500/10 border border-secondary/25 px-space-sm py-space-xs rounded-full font-bold">Caso 04 / Finanzas &amp; SaaS</span>
+<span class="text-loom-oatmeal font-label-sm text-label-sm">Firma de Inversión y Gestión de Activos</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+                  Alpha Capital: Dashboard financiero institucional con 99.98% de disponibilidad y analítica en vivo
+                </h2>
+<div class="space-y-space-md mt-space-xs">
+<!-- Desafío -->
+<div class="bg-surface-container-lowest/70 border border-outline-variant/30 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-error font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">lock_clock</span> El Desafío
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Inversionistas privados recibían informes en hojas de cálculo y PDFs enviados a fin de mes. La firma requería un entorno privado de alto nivel de seguridad con autenticación multifactor y rendimientos actualizados al cierre de cada jornada.
+                    </p>
+</div>
+<!-- Solución Telar Web -->
+<div class="bg-surface-container-lowest/70 border border-secondary/25 p-space-md rounded-xl">
+<h3 class="font-label-md text-label-md text-secondary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">analytics</span> La Solución Telar Web
+                    </h3>
+<p class="font-body-md text-body-md text-loom-oatmeal mt-space-xs">
+                      Construcción de una Single Page Application institucional protegida con encriptación AES-256, autenticación 2FA, gráficas vectoriales interactivas de rendimiento ponderado y descarga automatizada de certificados tributarios con un clic.
+                    </p>
+</div>
+</div>
+<!-- Resultados Clave Grid -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-sm pt-space-sm bg-surface-container-high/60 border border-outline-variant/40 p-space-md rounded-xl">
+<div>
+<p class="font-headline-md text-headline-md font-bold text-secondary">99.98%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Uptime garantizado en producción</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-primary">-40%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Consultas a mesa de soporte</p>
+</div>
+<div>
+<p class="font-headline-md text-headline-md font-bold text-loom-cream">100%</p>
+<p class="font-body-sm text-body-sm text-loom-oatmeal">Cumplimiento auditoría de datos</p>
+</div>
+</div>
+</div>
+<!-- Visual Mockup Showcase -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/50 p-space-md shadow-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-high/70 px-space-md py-space-xs rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="ml-space-sm font-code-badge text-code-badge text-loom-oatmeal">app.alphacapital.co/investor-portal</span>
+</div>
+<span class="font-code-badge text-code-badge text-primary font-bold">2FA ENABLED · SSL EV</span>
+</div>
+<img class="w-full h-72 md:h-80 object-cover rounded-lg sepia-[0.1] contrast-[1.05]" data-alt="Futuristic dark theme fintech portfolio management dashboard showing real-time investment return charts, multi-asset allocation donuts, interactive portfolio candles and illuminated cyan data telemetry strings connecting data blocks, inspired by quartz digital analytics interfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyPeQGUH1oFi49Mg7-Dw71qk4Rc5mLn_LEcX3Rk1F-eN4lbCBTRjxauaa2OoMRPpdqU8knn_PkORya0bC1OKIgohbqjfuQs0LPqzeHv5uJfZHAn3yDAFxOZajJQny1qiukEL1lJ5FGAqMvzuXf_XeSvBBdMxZoNLLFGTHq47mKUNkxzQecafq8fhGBOND0lfAH5D0oyT3URyCmh175IMC5tDrhce-KD9bXnst2OnXd5NJY63Y8rv0"/>
+<!-- Floating Micro Stat Overlay -->
+<div class="absolute -bottom-2 left-6 bg-surface-dim/95 border border-primary/30 backdrop-blur-xl p-space-md rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.7)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">Cifrado Bancario</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Auditoría OWASP Top 10 aprobada</p>
+</div>
+</div>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">shield</span>
+<span class="font-label-sm text-label-sm text-loom-cream font-bold uppercase tracking-wider">Fintech &amp; Private Cloud</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Next.js</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary border border-secondary/20 font-code-badge text-code-badge uppercase">Tailwind</span>
+<span class="px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary border border-primary/20 font-code-badge text-code-badge uppercase">Chart.js Live</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- 4. TESTIMONIALS SECTION ("Lo que dicen quienes ya escalaron con Telar Web") -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-space-2xl">
+<div class="flex flex-col gap-space-sm text-center max-w-3xl mx-auto mb-space-2xl">
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary font-bold">Voces Reales · Líderes de Negocio</span>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+              Lo que dicen quienes ya escalaron con Telar Web
+            </h2>
+<p class="font-body-md text-body-md text-loom-oatmeal">
+              Transparencia, cumplimiento de cronogramas y una obsesión compartida por métricas de conversión comprobables.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container/70 border border-outline-variant/40 backdrop-blur-xl p-space-lg rounded-2xl flex flex-col justify-between shadow-lg hover:border-amber-600/40 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<p class="font-body-md text-body-md text-loom-cream italic">
+                  "Antes de Telar Web teníamos una página web que parecía un folleto estático y tardábamos un día entero en cotizar un flete. Hoy el cliente cotiza en 20 segundos y cerramos el doble de contratos corporativos cada mes."
+                </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-lg mt-space-md bg-surface-container-high/40 border-t border-outline-variant/30 -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<img class="w-12 h-12 rounded-full object-cover border border-amber-600/30" data-alt="Professional headshot of a Colombian logistics director in a crisp navy jacket in a modern glass office, warm natural smile, high-end corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_xgul9rOLEGLtNV192VZV118DPf_gUGVAnn-R44aQM_7kgpN2uBAZZgCC9PZpCCSKBkvZJPLbU1RvJ5dXcqam3k5cXkLa0Zgt6ohOE4EvrBdvToXZH9i-lgktfHafksQyspq8O45YX6VqnqOYsi1yMoKoeHx5ozxvN4cVMhYjdKz-rAAWVPtMiNdxny3GnNlu12TJl-tS9kQySVdOf1mkzyn3bOohpbw8ThfLJBvu13zzwSVzNJ_b"/>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">Mauricio Cárdenas</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Gerente de Operaciones · Logística Andina</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container/70 border border-outline-variant/40 backdrop-blur-xl p-space-lg rounded-2xl flex flex-col justify-between shadow-lg hover:border-secondary/40 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<p class="font-body-md text-body-md text-loom-cream italic">
+                  "Nuestra recepción física era un caos con llamadas perdidas. El sistema que armaron sincroniza en tiempo real los consultorios de 8 especialistas. Logramos 0 citas cruzadas y el 65% de los pacientes agendan solos por la web."
+                </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-lg mt-space-md bg-surface-container-high/40 border-t border-outline-variant/30 -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<img class="w-12 h-12 rounded-full object-cover border border-secondary/30" data-alt="Portrait photo of a female dental surgeon and clinic founder wearing a modern dark medical coat, friendly confident expression, softly illuminated medical tech environment in Bogotá." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBUxb44PCYN371_tuz0Mz1_4Il_7YXtg-GdRzawfhOIC0FFAEl41ld-U7vxk95wBrBQrCyM_ExD6dci20JQ3jkp9dn_ww7jmwVYJVUoMG8qjYIKWcMO1XsFgcpMWeiyh25e46_NieMiSgFWpkaNrY34-yjowPdnIs-_p-3cOnu7Il95jbOAUhbFA-ERUI8VSCUKbHKyvfmd5G6dVPNLnkDY6nltBXu-_q4CrcC8Suo6mDd2dWzfBrR"/>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">Dra. Camila Restrepo</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Fundadora · Clínica Dental Sonrisas</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container/70 border border-outline-variant/40 backdrop-blur-xl p-space-lg rounded-2xl flex flex-col justify-between shadow-lg hover:border-amber-600/40 transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<p class="font-body-md text-body-md text-loom-cream italic">
+                  "Salir de los marketplaces y tener nuestra propia tienda directa con pasarela de pagos colombiana salvó nuestros márgenes. En 90 días triplicamos los envíos a Medellín, Cali y la Costa sin pagar 20% en comisiones."
+                </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-lg mt-space-md bg-surface-container-high/40 border-t border-outline-variant/30 -mx-space-lg -mb-space-lg p-space-md rounded-b-2xl">
+<img class="w-12 h-12 rounded-full object-cover border border-amber-600/30" data-alt="Portrait of an artisanal Colombian coffee roaster and entrepreneur, holding a coffee tasting cup in a high-tech modern tasting lab, warm golden lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8GhhiUgFyAWp_IbwPzqXdfSt6LwkbvP3DQ6MPvi_LnFDvSaeFRG8V_2ehjdOa_oq8AuFrh9Z_9aS6RjE3c6k0o8vbHItfZcfW-h9rxtcyhHqz0mnjrC_qk-PBr5RxGGUnA5YyFw_s4PGg-y1gI04AN_m32eyHeZmS4sGe1F2ybUft97-QRKP0XNMEMf6PF6WwcAKKzzxhLwkTW9eCUdfYcEP1SG7K_YBuCDhtRox_6zwAKa36q4H6"/>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-loom-cream leading-tight">Sebastián Henao</p>
+<p class="font-label-sm text-label-sm text-loom-oatmeal">Cofundador · Boutique Café Origen</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. FINAL CALL TO ACTION HERO -->
+<section class="max-w-7xl mx-auto px-margin lg:px-margin-lg pb-space-2xl">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low border border-amber-600/30 p-space-xl lg:p-space-2xl shadow-[0_0_50px_rgba(217,119,6,0.18)]">
+<!-- Ambient decorative shapes -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-amber-600/15 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="absolute -left-10 top-0 w-64 h-64 bg-emerald-600/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-amber-500/10 border border-amber-500/30 w-fit">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-badge text-code-badge uppercase tracking-wider text-primary font-bold">Tu proyecto puede ser el próximo</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-loom-cream font-bold">
+                  ¿Listo para convertir tu sitio web en el próximo caso de éxito?
+                </h2>
+<p class="font-body-lg text-body-lg text-loom-oatmeal max-w-2xl">
+                  Hablemos directamente sobre tus metas comerciales, cuellos de botella actuales y cómo diseñar una solución técnica a la medida con tiempos de entrega garantizados.
+                </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center justify-center gap-2 px-space-xl py-space-md rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 text-[#1a1105] font-label-md text-label-md font-bold shadow-[0_0_24px_rgba(217,119,6,0.4)] hover:from-amber-500 hover:to-amber-400 hover:shadow-[0_0_32px_rgba(245,158,11,0.6)] transition-all" data-path="cotizador" href="#">
+<span>Cotizar Mi Proyecto</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg bg-surface-container border border-outline-variant/60 text-loom-cream hover:bg-surface-container-high hover:border-amber-600/40 transition-all font-label-md text-label-md font-bold shadow-md" href="https://wa.me/573100000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-base">chat</span>
+<span>Chat Directo por WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Garantía Telar Web Box -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm bg-surface-container-lowest/80 border border-outline-variant/40 p-space-lg rounded-xl backdrop-blur-md">
+<h3 class="font-label-md text-label-md text-loom-cream font-bold uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">verified</span> Garantía Telar Web
+                </h3>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-loom-oatmeal">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Auditoría inicial de rendimiento sin costo</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Arquitectura 100% de tu propiedad (cero amarres)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Contratos claros con hitos de entrega formales</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Facturación legal colombiana (SAS)</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive JavaScript for Category Filtering -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const filterButtons = document.querySelectorAll('#case-filters .filter-btn');
+          const caseCards = document.querySelectorAll('#cases-container .case-card');
+
+          filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const filterValue = btn.getAttribute('data-filter');
+
+              // Style active button with Loom & Craft warm amber theme
+              filterButtons.forEach(b => {
+                b.classList.remove('bg-surface-container-high', 'text-loom-cream', 'font-bold', 'border-amber-600/40', 'shadow-[0_0_14px_rgba(217,119,6,0.25)]');
+                b.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant/40');
+              });
+
+              btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant/40');
+              btn.classList.add('bg-surface-container-high', 'text-loom-cream', 'font-bold', 'border-amber-600/40', 'shadow-[0_0_14px_rgba(217,119,6,0.25)]');
+
+              // Filter cards
+              caseCards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                if (filterValue === 'all' || (categories && categories.includes(filterValue))) {
+                  card.style.display = 'block';
+                  card.style.opacity = '1';
+                } else {
+                  card.style.display = 'none';
+                  card.style.opacity = '0';
+                }
+              });
+            });
+          });
+        });
+      </script>
+</div>
+</main>
+<!-- 6. FOOTER CORPORATIVO COMPLETO -->
+<footer class="w-full bg-surface-container-lowest border-t border-[#3d3630]/60">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-lg py-space-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-lg">
+<!-- Brand & Description -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<img alt="Telar Web" class="w-8 h-8 rounded-full object-cover ring-1 ring-amber-600/40 shadow-[0_0_10px_rgba(217,119,6,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxTQEb-Gx2OMEs08VFAV9o5vWGM3zmq3YeHRvu9VkYz7jqXnUi4YxpwxCFi2LhpmkD_tnHa46wws1k3UJsd5AeGM9A3Wea3-YhW9ivN5lFZ2ML487ykkMTwKlWBfsSABKA9eEAH0S1JulbPYmsT6JMIvFHhcwmdt5sjtMaizqkWviwV66sZ8gUglIPOMkY3JhbycbJia1zCcvi0wLwQOCGHOrnFi9bB0o31SwiteJlt7A0fmnPn3PIORteNRgFjAE4_A"/>
+<span class="font-headline-md text-headline-md text-loom-cream font-bold">Telar Web</span>
+</div>
+<p class="font-body-sm text-body-sm text-loom-oatmeal max-w-sm">
+            Arquitectura de software de alto impacto y productos web hechos a la medida desde Colombia para compañías globales. Precisión técnica, transparencia radical e ingeniería de clase mundial.
+          </p>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#f59e0b]"></span>
+<span class="font-code-badge text-code-badge uppercase text-primary font-bold">Software Craftsmanship • LatAm Hub</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="lg:col-span-2 flex flex-col gap-space-md">
+<h4 class="font-label-md text-label-md text-loom-cream font-bold uppercase tracking-wider">Navegación</h4>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-loom-oatmeal">
+<li><a class="hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="servicios" href="#">Servicios</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="proceso-y-acuerdo" href="#">Proceso &amp; Acuerdo</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="casos-de-exito" href="#">Casos de Éxito</a></li>
+<li><a class="hover:text-primary transition-colors" data-path="cotizador" href="#">Cotizador online</a></li>
+</ul>
+</div>
+<!-- Líneas Telar -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<h4 class="font-label-md text-label-md text-loom-cream font-bold uppercase tracking-wider">Líneas Telar</h4>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-loom-oatmeal">
+<div class="group">
+<span class="text-loom-cream font-bold block group-hover:text-primary transition-colors">Telar Web</span>
+<span class="font-label-sm text-label-sm text-loom-oatmeal/80">SaaS, aplicaciones web escalables y plataformas a medida</span>
+</div>
+<div class="group">
+<span class="text-loom-cream font-bold block group-hover:text-primary transition-colors">Telar Monitor</span>
+<span class="font-label-sm text-label-sm text-loom-oatmeal/80">Observabilidad cloud y telemetría de sistemas críticos</span>
+</div>
+<div class="group">
+<span class="text-loom-cream font-bold block group-hover:text-primary transition-colors">Telar Lab</span>
+<span class="font-label-sm text-label-sm text-loom-oatmeal/80">I+D, prototipado rápido y modelos de Inteligencia Artificial</span>
+</div>
+</div>
+</div>
+<!-- Contacto & Hub -->
+<div class="lg:col-span-3 flex flex-col gap-space-md">
+<h4 class="font-label-md text-label-md text-loom-cream font-bold uppercase tracking-wider">Contacto &amp; Hub</h4>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-loom-oatmeal">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">location_on</span>
+<span>Bogotá D.C., Colombia (GMT-5)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">chat</span>
+<a class="hover:text-primary transition-colors" href="https://wa.me/573100000000">WhatsApp Directo: (+57) 310 000 0000</a>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:hola@telarweb.co">hola@telarweb.co</a>
+</li>
+</ul>
+<div class="pt-space-xs">
+<a class="inline-flex items-center justify-center px-space-md py-space-xs rounded-lg bg-surface-container-high border border-amber-600/30 text-primary hover:bg-surface-container-highest hover:text-loom-cream transition-colors font-label-sm text-label-sm font-bold shadow-sm" data-path="cotizador" href="#">
+              Iniciar Consulta Directa →
+            </a>
+</div>
+</div>
+</div>
+<!-- Legal & Copyright -->
+<div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-loom-oatmeal font-label-sm text-label-sm border-t border-[#3d3630]/60">
+<p>© 2025 Telar Web S.A.S. Todos los derechos reservados. Desarrollado con tecnología de punta en Bogotá, Colombia.</p>
+<div class="flex items-center gap-space-lg">
+<a class="hover:text-loom-cream transition-colors" href="#">Términos de Servicio</a>
+<a class="hover:text-loom-cream transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-loom-cream transition-colors" href="#">Seguridad</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
